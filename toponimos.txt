@@ -1,0 +1,5 @@
+Q183	Alemania	alemán	alemana
+Q228	Andorra	andorrano	andorrana
+Q916	Angola	angoleño	angoleña
+Q781	Antigua y Barbuda	antiguano	antiguana
+Q851	Arabia Saudita	saudí	saudí
