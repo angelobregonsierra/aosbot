@@ -3,6 +3,7 @@ from pywikibot import pagegenerators as pg
 	
 #Para cambiar el elemento de Wikidata
 def cambiar(item, descripcion, qwikidata):
+	#time.sleep(10)
 	#repo = wikidata_site.data_repository()
 	#item = pywikibot.ItemPage(repo, qwikidata)
 	#item.get()
