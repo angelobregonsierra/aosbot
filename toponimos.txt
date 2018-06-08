@@ -1,5 +1,197 @@
-Q183	Alemania	alem�n	alemana
+Q889	Afganistán	afgano	afgana
+Q222	Albania	albano	albana
+Q183	Alemania	alemán	alemana
 Q228	Andorra	andorrano	andorrana
-Q916	Angola	angole�o	angole�a
+Q916	Angola	angoleño	angoleña
 Q781	Antigua y Barbuda	antiguano	antiguana
-Q851	Arabia Saudita	saud�	saud�
+Q851	Arabia Saudita	saudí	saudí
+Q262	Argelia	argelino	argelina
+Q414	Argentina	argentino	argentina
+Q399	Armenia	armenio	armenia
+Q408	Australia	australiano	australiana
+Q40	Austria	austríaco	austríaca
+Q227	Azerbaiyán	azerbaiyano	azerbaiyana
+Q778	Bahamas	bahameño	bahameña
+Q902	Bangladés	bangladesí	bangladesí
+Q244	Barbados	barbadense	barbadense
+Q398	Baréin	bareiní	bareiní
+Q31	Bélgica	belga	belga
+Q242	Belice	beliceño	beliceña
+Q962	Benín	beninés	beninesa
+Q184	Bielorrusia	bielorruso	bielorrusa
+Q836	Birmania	birmano	birmana
+Q750	Bolivia	boliviano	boliviana
+Q225	Bosnia-Herzegovina	bosnioherzegovino	bosnioherzegovina
+Q963	Botsuana	botsuano	botsuana
+Q155	Brasil	brasileño	brasileña
+Q921	Brunéi	bruneano	bruneana
+Q219	Bulgaria	búlgaro	búlgara
+Q965	Burkina Faso	burkinés	burkinesa
+Q967	Burundi	burundés	burundesa
+Q917	Bután	butanés	butanesa
+Q1011	Cabo Verde	caboverdiano	caboverdiana
+Q424	Camboya	camboyano	camboyana
+Q1009	Camerún	camerunés	camerunesa
+Q16	Canadá	canadiense	canadiense
+Q846	Catar	catarí	catarí
+Q657	Chad	chadiano	chadiana
+Q298	Chile	chileno	chilena
+Q148	China	chino	china
+Q229	Chipre	chipriota	chipriota
+Q739	Colombia	colombiano	colombiana
+Q970	Comoras	comorense	comorense
+Q971	Congo	congoleño	congoleña
+Q423	Corea del Norte	norcoreano	norcoreana
+Q884	Corea del Sur	surcoreano	surcoreana
+Q1008	Costa de Marfil	marfileño	marfileña
+Q800	Costa Rica	costarricense	costarricense
+Q224	Croacia	croata	croata
+Q241	Cuba	cubano	cubana
+Q35	Dinamarca	danés	danesa
+Q784	Dominica	dominiqués	dominiquesa
+Q736	Ecuador	ecuatoriano	ecuatoriana
+Q79	Egipto	egipcio	egipcia
+Q792	El Salvador	salvadoreño	salvadoreña
+Q878	Emiratos Árabes Unidos	emiratí	emiratí
+Q986	Eritrea	eritreo	eritrea
+Q214	Eslovaquia	eslovaco	eslovaca
+Q215	Eslovenia	esloveno	eslovena
+Q29	España	español	española
+Q30	Estados Unidos	estadounidense	estadounidense
+Q191	Estonia	estonio	estonia
+Q115	Etiopía	etíope	etíope
+Q928	Filipinas	filipino	filipina
+Q33	Finlandia	finlandés	finlandesa
+Q712	Fiyi	fiyiano	fiyiana
+Q142	Francia	francés	francesa
+Q1000	Gabón	gabonés	gabonesa
+Q1005	Gambia	gambiano	gambiana
+Q230	Georgia	georgiano	georgiana
+Q117	Ghana	ghanés	ghanesa
+Q769	Granada	granadino	granadina
+Q41	Grecia	griego	griega
+Q774	Guatemala	guatemalteco	guatemalteca
+Q1006	Guinea	guineano	guineana
+Q983	Guinea Ecuatorial	ecuatoguineano	ecuatoguineana
+Q1007	Guinea-Bisáu	bisauguineano	bisauguineana
+Q734	Guyana	guyanés	guyanesa
+Q790	Haití	haitiano	haitiana
+Q783	Honduras	hondureño	hondureña
+Q28	Hungría	húngaro	húngara
+Q668	India	indio	india
+Q252	Indonesia	indonesio	indonesia
+Q796	Irak	iraquí	iraquí
+Q794	Irán	iraní	iraní
+Q27	Irlanda	irlandés	irlandesa
+Q189	Islandia	islandés	islandesa
+Q709	Islas Marshall	marshalés	marshalesa
+Q685	Islas Salomón	salomonense	salomonense
+Q801	Israel	israelí	israelí
+Q38	Italia	italiano	italiana
+Q766	Jamaica	jamaicano	jamaicana
+Q17	Japón	japonés	japonesa
+Q810	Jordania	jordano	jordana
+Q232	Kazajistán	kazajo	kazaja
+Q114	Kenia	keniano	keniana
+Q813	Kirguistán	kirguís	kirguís
+Q710	Kiribati	kiribatiano	kiribatiana
+Q1246	Kosovo	kosovar	kosovar
+Q817	Kuwait	kuwaití	kuwaití
+Q819	Laos	laosiano	laosiana
+Q1013	Lesoto	lesotense	lesotense
+Q211	Letonia	letón	letona
+Q822	Líbano	libanés	libanesa
+Q1014	Liberia	liberiano	liberiana
+Q1016	Libia	libio	libia
+Q347	Liechtenstein	liechtensteiniano	liechtensteiniana
+Q37	Lituania	lituano	lituana
+Q32	Luxemburgo	luxemburgués	luxemburguesa
+Q221	Macedonia	macedonio	macedonia
+Q1019	Madagascar	malgache	malgache
+Q833	Malasia	malayo	malaya
+Q1020	Malaui	malauí	malauí
+Q826	Maldivas	maldivo	maldiva
+Q912	Malí	maliense	maliense
+Q233	Malta	maltés	maltesa
+Q1028	Marruecos	marroquí	marroquí
+Q1027	Mauricio	mauriciano	mauriciana
+Q1025	Mauritania	mauritano	mauritana
+Q96	México	mexicano	mexicana
+Q702	Micronesia	micronesio	micronesia
+Q217	Moldavia	moldavo	moldava
+Q235	Mónaco	monegasco	monegasca
+Q711	Mongolia	mongol	mongola
+Q236	Montenegro	montenegrino	montenegrina
+Q1029	Mozambique	mozambiqueño	mozambiqueña
+Q1030	Namibia	namibio	namibia
+Q697	Nauru	nauruano	nauruana
+Q837	Nepal	nepalí	nepalí
+Q811	Nicaragua	nicaragüense	nicaragüense
+Q1032	Níger	nigerino	nigerina
+Q1033	Nigeria	nigeriano	nigeriana
+Q20	Noruega	noruego	noruega
+Q664	Nueva Zelanda	neozelandés	neozelandesa
+Q842	Omán	omaní	omaní
+Q55	Países Bajos	neerlandés	neerlandesa
+Q843	Pakistán	pakistaní	pakistaní
+Q695	Palaos	palauano	palauana
+Q219060	Palestina	palestino	palestina
+Q804	Panamá	panameño	panameña
+Q691	Papúa Nueva Guinea	papuano	papuana
+Q733	Paraguay	paraguayo	paraguaya
+Q419	Perú	peruano	peruana
+Q36	Polonia	polaco	polaca
+Q45	Portugal	portugués	portuguesa
+Q145	Reino Unido	británico	británica
+Q929	República Centroafricana	centroafricano	centroafricana
+Q213	República Checa	checo	checa
+Q974	República Democrática del Congo	congoleño	congoleño
+Q786	República Dominicana	dominicano	dominicana
+Q1037	Ruanda	ruandés	ruandesa
+Q218	Rumania	rumano	rumana
+Q159	Rusia	ruso	rusa
+Q683	Samoa	samoano	samoana
+Q763	San Cristóbal y Nieves	sancristobaleño	sancristobaleña
+Q238	San Marino	sanmarinense	sanmarinense
+Q757	San Vicente y las Granadinas	sanvicentino	sanvicentina
+Q760	Santa Lucía	santalucense	santalucense
+Q1039	Santo Tomé y Príncipe	santotomense	santotomense
+Q1041	Senegal	senegalés	senegalesa
+Q403	Serbia	serbio	serbia
+Q1042	Seychelles	seychellense	seychellense
+Q1044	Sierra Leona	sierraleonés	sierraleonesa
+Q334	Singapur	singapurense	singapurense
+Q858	Siria	sirio	siria
+Q1045	Somalia	somalí	somalí
+Q854	Sri Lanka	srilanqués	srilanquesa
+Q1050	Suazilandia	suazi	suazi
+Q258	Sudáfrica	sudafricano	sudafricana
+Q1049	Sudán	sudanés	sudanesa
+Q958	Sudán del Sur	sursudanés	sursudanesa
+Q34	Suecia	sueco	sueca
+Q39	Suiza	suizo	suiza
+Q730	Surinam	surinamés	surinamesa
+Q869	Tailandia	tailandés	tailandesa
+Q865	Taiwán	taiwanés	taiwanesa
+Q924	Tanzania	tanzano	tanzana
+Q863	Tayikistán	tayiko	tayika
+Q574	Timor Oriental	timorense	timorense
+Q945	Togo	togolés	togolesa
+Q678	Tonga	tongano	tongana
+Q754	Trinidad y Tobago	trinitense	trinitense
+Q948	Túnez	tunecino	tunecina
+Q874	Turkmenistán	turkmeno	turkmena
+Q43	Turquía	turco	turca
+Q672	Tuvalu	tuvaluano	tuvaluana
+Q212	Ucrania	ucraniano	ucraniana
+Q1036	Uganda	ugandés	ugandesa
+Q77	Uruguay	uruguayo	uruguaya
+Q265	Uzbekistán	uzbeko	uzbeka
+Q686	Vanuatu	vanuatuense	vanuatuense
+Q237	Vaticano	vaticano	vaticana
+Q717	Venezuela	venezolano	venezolana
+Q881	Vietnam	vietnamita	vietnamita
+Q805	Yemen	yemení	yemení
+Q977	Yibuti	yibutiano	yibutiana
+Q953	Zambia	zambiano	zambiana
+Q954	Zimbabue	zimbabuense	zimbabuense

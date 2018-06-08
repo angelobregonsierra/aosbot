@@ -1,1 +1,4 @@
 Q13382576	remero	remera
+Q476246	regatista	regatista
+Q695829	promotor	promotora
+Q901	científico	científica

@@ -26,7 +26,7 @@ def cambiar(item, descripcion):
     """
     print(item)
     mydescriptions = {u'es': u''+ descripcion +''}
-    item.editDescriptions(mydescriptions, summary=u'Actualizando descripción con aosbot.')
+    item.editDescriptions(mydescriptions, summary=u'Actualizando descripción con Aosbot.')
 
 def consulta(qprofesion, qpais, sexo, site=None):
     """
