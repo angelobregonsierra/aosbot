@@ -24,7 +24,7 @@ def cambiar(item, descripcion):
     cambiar(item, descripcion):
         Cambia un item en Wikidata con la descripcion entregada
     """
-    #print(item)
+    print(item)
     mydescriptions = {u'es': u''+ descripcion +''}
     item.editDescriptions(mydescriptions, summary=u'Actualizando descripción con aosbot.')
 
@@ -73,6 +73,8 @@ def main():
                 genero = FEM if i % 2 else MAS
                 profesion_gen = profesion_fem if i % 2 else profesion_mas
                 toponimo_gen = toponimo_fem if i % 2 else toponimo_mas
+                profesion_gen=profesion_gen.rstrip('\n')
+                toponimo_gen=toponimo_gen.rstrip('\n')
                 descripcion = "{0} {1}".format(profesion_gen, toponimo_gen)
                 print ('>>> Consultando {0}'.format(descripcion))
                 pages = consulta(qProfesion, qToponimo, genero, site=wikidata_site)
