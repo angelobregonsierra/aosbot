@@ -26,7 +26,8 @@ def cambiar(item, descripcion):
     """
     print(item)
     mydescriptions = {u'es': u''+ descripcion +''}
-    item.editDescriptions(mydescriptions, summary=u'Actualizando descripción con Aosbot.')
+    summary=u'Se añade la descripción [es]: ' + str(mydescriptions['es'])
+    item.editDescriptions(mydescriptions, summary=summary)
 
 def consulta(qprofesion, qpais, sexo, site=None):
     """
@@ -48,8 +49,8 @@ def consulta(qprofesion, qpais, sexo, site=None):
     FILTER(?occupation != wd:""" + qprofesion + """)
       })
       FILTER(NOT EXISTS {
-    ?item wdt:P27 ?occupation.
-    FILTER(?occupation != wd:""" + qpais + """)
+    ?item wdt:P27 ?pais.
+    FILTER(?pais != wd:""" + qpais + """)
       })
       FILTER(!BOUND(?description))
     } """
@@ -59,12 +60,12 @@ def consulta(qprofesion, qpais, sexo, site=None):
 
 def main():
     wikidata_site = pywikibot.Site("wikidata", "wikidata")
-    profesiones = obtener_data('profesiones.txt')
+    profesiones = obtener_data('../aosbot/profesiones.txt')
     for profesion in profesiones:
         if len(profesion) != 3:
             continue
         qProfesion, profesion_mas, profesion_fem = profesion
-        toponimos = obtener_data('toponimos.txt')
+        toponimos = obtener_data('../aosbot/toponimos.txt')
         for toponimo in toponimos:
             if len(toponimo) != 4:
                 continue
