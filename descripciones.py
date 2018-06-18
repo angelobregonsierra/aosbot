@@ -27,7 +27,13 @@ def cambiar(item, descripcion):
     print(item)
     mydescriptions = {u'es': u''+ descripcion +''}
     summary=u'Se añade la descripción [es]: ' + str(mydescriptions['es'])
-    item.editDescriptions(mydescriptions, summary=summary)
+    try:
+	    item.editDescriptions(mydescriptions, summary=summary)
+    except:
+        f = open ("errores.txt", "a")
+        f.write(str(item) + '\n')
+        f.close()
+        print ('No se ha podido modificar la descripción de: ' + str(item))
 
 def consulta(qprofesion, qpais, sexo, site=None):
     """

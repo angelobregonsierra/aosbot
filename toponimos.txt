@@ -195,3 +195,8 @@ Q805	Yemen	yemení	yemení
 Q977	Yibuti	yibutiano	yibutiana
 Q953	Zambia	zambiano	zambiana
 Q954	Zimbabue	zimbabuense	zimbabuense
+Q8646	Hong Kong	hongkonés	hongkonesa
+Q14773	Macao	macaense	macaense
+Q15180	Unión Soviética	soviético soviética
+Q29999	Países Bajos	neerlandés	neerlandesa
+Q33946	Checoslovaquia	checoslovaco	checoslovaca
