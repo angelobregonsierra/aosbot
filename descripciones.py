@@ -13,7 +13,7 @@ def obtener_data(archivo, separador="\t"):
         Obtiene los contenidos del archivo que usa el sparador \t
     """
     data = []
-    with open(archivo, encoding="utf8") as f:
+    with open(archivo, encoding="utf-8") as f:
         for line in f.readlines():
             data.append(line.split(separador))
     return data
@@ -59,6 +59,8 @@ def consulta(qprofesion, qpais, sexo, site=None):
     FILTER(?pais != wd:""" + qpais + """)
       })
       FILTER(!BOUND(?description))
+	  FILTER(NOT EXISTS { ?item wdt:P31 wd:Q95074. })
+	  FILTER(NOT EXISTS { ?item wdt:P31 wd:Q15632617. })
     } """
     #print(query)
     return pg.WikidataSPARQLPageGenerator(query, site=site)
@@ -66,12 +68,14 @@ def consulta(qprofesion, qpais, sexo, site=None):
 
 def main():
     wikidata_site = pywikibot.Site("wikidata", "wikidata")
+    #idiomas=("es" , "ca")
+	#for i in range(len(idiomas)):
     profesiones = obtener_data('../aosbot/profesiones.txt')
     for profesion in profesiones:
         if len(profesion) != 3:
             continue
         qProfesion, profesion_mas, profesion_fem = profesion
-        toponimos = obtener_data('../aosbot/toponimos.txt')
+        toponimos = obtener_data('../aosbot/gentilicios.txt')
         for toponimo in toponimos:
             if len(toponimo) != 4:
                 continue
@@ -87,8 +91,8 @@ def main():
                 pages = consulta(qProfesion, qToponimo, genero, site=wikidata_site)
                 for item in pages:
                     cambiar(item, descripcion)
-                    print('Pausando 20 segundos...')
-                    time.sleep(20)
+                    #print('Pausando 10 segundos...')
+                    #time.sleep(10)
 
 
 if __name__ == "__main__":

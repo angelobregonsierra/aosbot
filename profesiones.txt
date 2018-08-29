@@ -288,7 +288,7 @@ Q10264925	demagogo	demagoga
 Q12360779	demógrafo	demógrafa
 Q48558140	demonólogo	demonóloga
 Q42296463	dendrólogo	dendróloga
-Q27349	odontólogo	dentista
+Q27349	odontólogo	odontóloga
 Q2901403	denturista	denturista
 Q2447386	dermatólogo	dermatóloga
 Q814214	descargador	descargadora
@@ -435,7 +435,6 @@ Q1492770	galvanizador	galvanizadora
 Q1524582	ganadero	ganadera
 Q19280221	gastroenterólogo	gastroenteróloga
 Q24203053	gastrónomo	gastrónoma
-Q82723	geisha	geisha
 Q16738642	gemólogo	gemóloga
 Q8963721	genealogista	genealogista
 Q3126128	genetista	genetista
@@ -587,13 +586,11 @@ Q911554	magnate	magnate
 Q16271261	malacólogo	malacóloga
 Q1320883	mánager	mánager
 Q19723482	mandolinista	mandolinista
-Q747493	manicura	manicura
 Q935666	maquillador	maquilladora
 Q2775569	maquinista	maquinista
 Q3274496	maquinista	maquinista
 Q196721	maquinista	maquinista
 Q13382460	maratonista	maratonista
-Q45199	marinero	marina
 Q16102070	marineoffizier	marineoffizier
 Q2215100	marinero	marinera
 Q19828330	marxólogo	marxóloga
@@ -601,7 +598,6 @@ Q6005272	masajista	masajista
 Q16831394	mastozoólogo	mastozoóloga
 Q2412523	matador	matadora
 Q170790	matemático	matemática
-Q185196	matrona	matrona
 Q2109655	mayista	mayista
 Q327029	mecánico	mecánica
 Q17319653	mecanógrafo	mecanógrafa
@@ -642,7 +638,6 @@ Q694116	molinero	molinera
 Q116	monarca	monarca
 Q19829967	mongolista	mongolista
 Q3320963	monitor-educador	monitora-educadora
-Q28146366	monja	monja
 Q6901699	monologuista	monologuista
 Q9149093	montañero	montañera
 Q1297719	moralista	moralista
@@ -656,7 +651,6 @@ Q500097	musher	musher
 Q639669	músico	música
 Q14915627	musicólogo	musicóloga
 Q10843402	nadador	nadadora
-Q936969	nana	nana
 Q10384029	narcotraficante	narcotraficante
 Q755070	narrador	narradora
 Q18805	naturalista	naturalista
@@ -924,7 +918,7 @@ Q51397277	tocaor	tocaora
 Q2443377	topógrafo	topógrafa
 Q18663426	topólogo	topóloga
 Q549322	torero	torera
-Q28933489	Tornero	Tornera
+Q28933489	tornero	tornera
 Q20725072	torturador	torturadora
 Q4459623	toxicólogo	toxicóloga
 Q327055	trabajador	trabajadora
