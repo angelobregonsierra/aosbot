@@ -25,16 +25,16 @@ def cambiar(item, descripcion):
         Cambia un item en Wikidata con la descripcion entregada
     """
     print(item)
-    mydescriptions = {u'es': u''+ descripcion +''}
-    summary=u'Se añade la descripción [es]: ' + str(mydescriptions['es'])
+    summary=u'Se añaden descripciones en varios idiomas'
     try:
-	    item.editDescriptions(mydescriptions, summary=summary)
+	    item.editDescriptions(descripcion, summary=summary)
     except:
         f = open ("errores.txt", "a")
         f.write(str(item) + '\n')
         f.close()
         print ('No se ha podido modificar la descripción de: ' + str(item))
 
+	
 def consulta(qprofesion, qpais, sexo, site=None):
     """
     consulta(qprofesion, qpais, sexo):
@@ -49,6 +49,8 @@ def consulta(qprofesion, qpais, sexo, site=None):
     OPTIONAL {
     ?item schema:description ?description.
     FILTER((LANG(?description)) = "es")
+	?item schema:description ?description.
+    FILTER((LANG(?description)) = "ast")
       }
       FILTER(NOT EXISTS {
     ?item wdt:P106 ?occupation.
@@ -68,27 +70,29 @@ def consulta(qprofesion, qpais, sexo, site=None):
 
 def main():
     wikidata_site = pywikibot.Site("wikidata", "wikidata")
-    #idiomas=("es" , "ca")
-	#for i in range(len(idiomas)):
     profesiones = obtener_data('../aosbot/profesiones.txt')
     for profesion in profesiones:
-        if len(profesion) != 3:
+        if len(profesion) != 5:
             continue
-        qProfesion, profesion_mas, profesion_fem = profesion
+        qProfesion, profesion_mas, profesion_fem, profesion_mas_ast, profesion_fem_ast= profesion
         toponimos = obtener_data('../aosbot/gentilicios.txt')
         for toponimo in toponimos:
-            if len(toponimo) != 4:
+            if len(toponimo) != 6:
                 continue
-            qToponimo, toponimo_pais, toponimo_mas, toponimo_fem = toponimo
+            qGentilicio, gentilicio_pais, gentilicio_mas, gentilicio_fem, gentilicio_mas_ast, gentilicio_fem_ast = toponimo
             for i in [0,1]:
                 genero = FEM if i % 2 else MAS
-                profesion_gen = profesion_fem if i % 2 else profesion_mas
-                toponimo_gen = toponimo_fem if i % 2 else toponimo_mas
-                profesion_gen=profesion_gen.rstrip('\n')
-                toponimo_gen=toponimo_gen.rstrip('\n')
-                descripcion = "{0} {1}".format(profesion_gen, toponimo_gen)
-                print ('>>> Consultando {0}'.format(descripcion))
-                pages = consulta(qProfesion, qToponimo, genero, site=wikidata_site)
+                profesion_es = profesion_fem if i % 2 else profesion_mas
+                gentilicio_es = gentilicio_fem if i % 2 else gentilicio_mas
+                profesion_ast = profesion_fem_ast if i % 2 else profesion_mas_ast
+                gentilicio_ast = gentilicio_fem_ast if i % 2 else gentilicio_mas_ast
+                profesion_es=profesion_es.rstrip('\n')
+                gentilicio_es=gentilicio_es.rstrip('\n')
+                profesion_ast=profesion_ast.rstrip('\n')
+                gentilicio_ast=gentilicio_ast.rstrip('\n')
+                descripcion = {u'es': u''+ "{0} {1}".format(profesion_es, gentilicio_es) +'', u'ast': u''+ "{0} {1}".format(profesion_ast, gentilicio_ast)}
+                print ('>>> Consultando {0} {1}'.format(profesion_es, gentilicio_es))
+                pages = consulta(qProfesion, qGentilicio, genero, site=wikidata_site)
                 for item in pages:
                     cambiar(item, descripcion)
                     #print('Pausando 10 segundos...')
