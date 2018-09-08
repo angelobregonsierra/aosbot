@@ -19,7 +19,7 @@ def obtener_data(archivo, separador="\t"):
     return data
 
 
-def cambiar(item, descripcion):
+def cambiar(item, descripcion, descripcion_es):
     """
     cambiar(item, descripcion):
         Cambia un item en Wikidata con la descripcion entregada
@@ -32,6 +32,9 @@ def cambiar(item, descripcion):
             if(cod_idioma in descripcion):
                 del descripcion[cod_idioma]
         item.editDescriptions(descripcion, summary=summary)
+        f = open ("estadisticas.txt", "a")
+        f.write(str(descripcion.keys()) + " - " + str(descripcion_es) + '\n')
+        f.close()
     except:
         f = open ("errores.txt", "a")
         f.write(str(item) + '\n')
@@ -104,8 +107,9 @@ def main():
                 descripcion = {u'es': u''+ "{0} {1}".format(profesion_es, gentilicio_es) +'', u'ast': u''+ "{0} {1}".format(profesion_ast, gentilicio_ast)}
                 print ('>>> Consultando {0} {1}'.format(profesion_es, gentilicio_es))
                 pages = consulta(qProfesion, qGentilicio, genero, site=wikidata_site)
+                descripcion_es= ('{0} {1}'.format(profesion_es, gentilicio_es))
                 for item in pages:
-                    cambiar(item, descripcion)
+                    cambiar(item, descripcion, descripcion_es)
                     #print('Pausando 10 segundos...')
                     #time.sleep(10)
 
