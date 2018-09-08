@@ -27,7 +27,11 @@ def cambiar(item, descripcion):
     print(item)
     summary=u'Se añaden descripciones en varios idiomas'
     try:
-	    item.editDescriptions(descripcion, summary=summary)
+        item.get();
+        for cod_idioma in item.descriptions:
+            if(cod_idioma in descripcion):
+                del descripcion[cod_idioma]
+        item.editDescriptions(descripcion, summary=summary)
     except:
         f = open ("errores.txt", "a")
         f.write(str(item) + '\n')
@@ -42,27 +46,34 @@ def consulta(qprofesion, qpais, sexo, site=None):
     """
     # qpais[0]=q de wikidata  qpais[1]=país  qpais[2]=toponimo masc  qpais[3]=toponimo fem
     query = """
-    SELECT ?item ?gender WHERE {
+    SELECT DISTINCT ?item ?gender WHERE {
       ?item wdt:P106 wd:""" + qprofesion + """.
       ?item wdt:P27 wd:""" + qpais + """.
       ?item wdt:P21 wd:""" + sexo + """.
-    OPTIONAL {
-    ?item schema:description ?description.
-    FILTER((LANG(?description)) = "es")
-	?item schema:description ?description.
-    FILTER((LANG(?description)) = "ast")
-      }
-      FILTER(NOT EXISTS {
-    ?item wdt:P106 ?occupation.
-    FILTER(?occupation != wd:""" + qprofesion + """)
-      })
-      FILTER(NOT EXISTS {
-    ?item wdt:P27 ?pais.
-    FILTER(?pais != wd:""" + qpais + """)
-      })
-      FILTER(!BOUND(?description))
-	  FILTER(NOT EXISTS { ?item wdt:P31 wd:Q95074. })
-	  FILTER(NOT EXISTS { ?item wdt:P31 wd:Q15632617. })
+    {
+        FILTER (NOT EXISTS {
+          ?item schema:description ?description.
+          FILTER((LANG(?description)) = "es")
+        })
+    }
+    UNION 
+    {
+        FILTER (NOT EXISTS {
+           ?item schema:description ?description.
+           FILTER((LANG(?description)) = "ast")
+        })
+    }
+    FILTER(NOT EXISTS {
+       ?item wdt:P106 ?occupation.
+       FILTER(?occupation != wd:""" + qprofesion + """)
+    })
+    FILTER(NOT EXISTS {
+      ?item wdt:P27 ?pais.
+      FILTER(?pais != wd:""" + qpais + """)
+    })
+    FILTER(!BOUND(?description))
+      FILTER(NOT EXISTS { ?item wdt:P31 wd:Q95074. })
+      FILTER(NOT EXISTS { ?item wdt:P31 wd:Q15632617. })
     } """
     #print(query)
     return pg.WikidataSPARQLPageGenerator(query, site=site)
