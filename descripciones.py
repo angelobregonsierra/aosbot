@@ -10,7 +10,7 @@ MAS = 'Q6581097'
 def obtener_data(archivo, separador="\t"):
     """
     obtener_data(archivo, separador="\t"):
-        Obtiene los contenidos del archivo que usa el sparador \t
+        Obtiene los contenidos del archivo que usa el separador \t
     """
     data = []
     with open(archivo, encoding="utf-8") as f:
@@ -33,7 +33,7 @@ def cambiar(item, descripcion, descripcion_es):
                 del descripcion[cod_idioma]
         item.editDescriptions(descripcion, summary=summary)
         f = open ("estadisticas.txt", "a")
-        f.write(str(descripcion.keys()) + " - " + str(descripcion_es) + '\n')
+        f.write(str(str(descripcion_es) + " - " + descripcion.keys()) + '\n')
         f.close()
     except:
         f = open ("errores.txt", "a")
@@ -41,7 +41,7 @@ def cambiar(item, descripcion, descripcion_es):
         f.close()
         print ('No se ha podido modificar la descripción de: ' + str(item))
 
-	
+
 def consulta(qprofesion, qpais, sexo, site=None):
     """
     consulta(qprofesion, qpais, sexo):
