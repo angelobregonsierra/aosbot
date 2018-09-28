@@ -19,14 +19,14 @@ def main():
                     if ("fusionar" in fus) or ("Fusionar" in fus):
                        continue
                     else:
-                        nueva_pagina=pywikibot.Page(site, str(fus['1']))
                         try:
+                            nueva_pagina=pywikibot.Page(site, str(fus['1']))
                             if(nueva_pagina.exists()==False):
-                                f = open ("fusionar.txt", "a")
+                                f = open ("erroresFusionar.txt", mode='a', encoding='utf-8')
                                 f.write(str(page.title()) + '\n')
                                 f.close()
                         except:
-                            f = open ("fusionar.txt", "a")
+                            f = open ("erroresFusionar.txt", mode='a', encoding='utf-8')
                             f.write('Error en: ' + str(page.title()) + '\n')
                             f.close()
         print ("\n")

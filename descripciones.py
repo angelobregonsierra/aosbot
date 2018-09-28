@@ -32,11 +32,11 @@ def cambiar(item, descripcion, descripcion_es):
             if(cod_idioma in descripcion):
                 del descripcion[cod_idioma]
         item.editDescriptions(descripcion, summary=summary)
-        f = open ("estadisticas.txt", "a")
+        f = open ("estadisticas.txt", "a", encoding="utf-8")
         f.write(str(str(descripcion_es) + " - " + descripcion.keys()) + '\n')
         f.close()
     except:
-        f = open ("errores.txt", "a")
+        f = open ("errores.txt", "a", encoding="utf-8")
         f.write(str(item) + '\n')
         f.close()
         print ('No se ha podido modificar la descripción de: ' + str(item))
