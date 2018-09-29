@@ -39,7 +39,7 @@ def main():
                                 page.save(u"Ya aparece en control de autoridades")
                         except:
                             f = open ("erroresPlantillas.txt", mode='a', encoding='utf-8')
-                            f.write(str(page.title()) + '\n')
+                            f.write("Exception: " + str(page.title()) + '\n')
                             f.close()
         print ("\n")
 
