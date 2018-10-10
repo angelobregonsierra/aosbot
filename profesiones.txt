@@ -1,5 +1,0 @@
-Q752129	astrofísico	astrofísica	astrofísicu	astrofísica
-Q155647	astrólogo	astróloga	astrólogu	astróloga
-Q11631	astronauta	astronauta	astronauta	astronauta
-Q2868586	astronauta comercial	astronauta comercial	astronauta comercial	astronauta comercial
-Q11063	astrónomo	astrónoma	astrónomu	astrónoma
