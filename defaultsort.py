@@ -6,9 +6,6 @@ from pywikibot import pagegenerators as pg
 import pywikibot
 import aosbot as tools
 
-site = pywikibot.Site("es", "wikipedia")
-
-
 def main(*args):
 
     category = 'Personas'
@@ -17,6 +14,7 @@ def main(*args):
         if arg.startswith('-category:'):
             category = arg[10:]
 
+    site = pywikibot.Site("es", "wikipedia")
     cat = pywikibot.Category(site, 'Category:' + category)
     gen = pg.CategorizedPageGenerator(cat, recurse=True)
     articles = pg.PreloadingGenerator(gen)
