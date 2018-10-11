@@ -15,8 +15,9 @@ def main():
     categoria='Categoría:Wikipedia:Artículos con plantilla '+termino
     cat = pywikibot.Category(site,categoria)
     gen = pg.CategorizedPageGenerator(cat)
-    for page in gen:
-        print("<<<<<<<<<<<<<<  " + page.title())
+    articles = pg.PreloadingGenerator(gen)
+    for page in articles:
+        print("<<<<<<<<<<<<<< {0} ".format(page.title()))
         page_str = page.get()
         tmpl_list = pywikibot.textlib.extract_templates_and_params(page_str)
         for tipo in tmpl_list:
