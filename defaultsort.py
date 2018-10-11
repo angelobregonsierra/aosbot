@@ -4,7 +4,7 @@
 # -*- coding: utf-8 -*-
 from pywikibot import pagegenerators as pg
 import pywikibot
-import tools
+import aosbot as tools
 
 site = pywikibot.Site("es", "wikipedia")
 
