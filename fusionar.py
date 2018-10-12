@@ -2,18 +2,13 @@
 
 from pywikibot import pagegenerators as pg
 import pywikibot
+import aosbot as tools
 
 categories_fusionar = ['fusionar en', 'fusionar a',
                        'fusionar hacia', 'fusionar desde', 'fusionar']
 
 
-def write(data='', file='fusionar.txt'):
-    f = open(file, "a", encoding='utf8')
-    f.write(data + '\n')
-    f.close()
-
 # código que busca en la categoría de artículos con la plantilla fusionar y comprueba si el artículo con el que debería fusionarse existe o no. Si no existe se graba en un fichero
-
 
 def main():
     site = pywikibot.Site("es", "wikipedia")
@@ -29,19 +24,21 @@ def main():
         for tipo in templates_to_check:
             plantilla, parametros = tipo
             if '1' not in parametros:
-                write(data='[!!] Falta parámetro en {0}'.format(
-                    str(page.title())))
+                tools.write(data='[!!] Falta parámetro en {0}'.format(
+                    str(page.title())), filename="fusionar.txt")
                 continue
             else:
                 try:
                     nueva_pagina = pywikibot.Page(site, str(parametros['1']))
                     if(nueva_pagina.exists() == False):
-                        write(data=str(page.title()))
+                        tools.write(data=str(page.title()),
+                                    filename="fusionar.txt")
                     else:
                         print('La página {0} existe'.format(
                             nueva_pagina.title()))
                 except Exception:
-                    write(data='[!] Error en {0}'.format(str(page.title())))
+                    tools.write(data='[!] Error en {0}'.format(
+                        str(page.title())), filename="fusionar.txt")
 
 
 if __name__ == "__main__":
